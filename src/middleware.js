@@ -12,11 +12,13 @@ export const middleware=req=>{
     if(!isPublicPath && !token){
         return NextResponse.redirect(new URL('/auth/login',req.nextUrl))
     }
+    
 }
  
 // See "Matching Paths" below to learn more
 export const config = {
   matcher: [
+    '/',
     '/uploadfile',
     '/auth/login',
     '/auth/register'

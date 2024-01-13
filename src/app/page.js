@@ -26,10 +26,10 @@ export default function Home() {
           
             
               <Link href='/auth/register'
-          onClick={(e)=>urlHandler('/')}
+      
           className=' h-max  p-2 block border border-solid border-slate-950 text-slate-950 font-bold hover:bg-slate-900 hover:text-slate-200 ' >Sign up</Link>
           <Link href='/auth/login'
-          onClick={(e)=>urlHandler('/')}
+          
           className=' h-max  p-2 block border border-solid border-slate-950 text-slate-950 font-bold hover:bg-slate-900 hover:text-slate-200 '>Login</Link>
         </div>:
             <h1>Email:{emailc}</h1>

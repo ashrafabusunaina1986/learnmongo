@@ -35,7 +35,7 @@ function Register() {
                     'Type-Content': 'application/json'
                 }
             })
-            if (!res.ok) throw new Error('Something went wrong')
+            if (!res.ok) console.log( res)
             //console.log(await res.json())
             const em=(await res.json())
             if(em.error==='user already'){
@@ -43,7 +43,7 @@ function Register() {
             }else{
                 setEmailc(email)
                 setUser('')
-                router.push(url)
+                router.push('/')
             }
         }else{
             setBrackets('enter the brackets')
