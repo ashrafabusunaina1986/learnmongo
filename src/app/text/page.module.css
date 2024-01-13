@@ -1,0 +1,44 @@
+.form{
+    background-color: #d19c9c;
+    margin: 20px auto;
+    width: max-content;
+    border-radius: 10px;
+}
+.form button{
+    background-color: #222;
+    color: #eee;
+    padding: 5px 10px ;
+    border-radius: 3px;
+}
+.input{
+    border: 1px solid #555;
+    border-radius: 10px;
+    background-color: #222;
+    color: #eee;
+    padding: 3px 10px;
+    margin: 10px auto;
+}
+.cart{
+    box-shadow:  0 0 3px 3px #000;
+    background-color: #555;
+    padding: 10px 15px;
+    margin: 10px auto;
+    width: 50%;
+}
+.cart1{
+    box-shadow:   0 3px 1px #f1d7d7;
+    background-color: #969696;
+    padding: 5px 10px;
+    margin: 15px 5px;
+    border-radius: 10px;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}

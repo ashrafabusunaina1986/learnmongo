@@ -1,0 +1,16 @@
+.form{
+    box-shadow: 0 8px 10px rgb(9, 9, 10);
+    margin: 20px auto;
+    padding: 20px ;
+    width: 500px;
+    border-radius: 3px;
+    background-color: #777;
+}
+.form input,.form button{
+    color: #eee;
+    background-color: #444;
+    box-shadow: 0 3px 5px #555;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 5px auto;
+}
