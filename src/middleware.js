@@ -10,10 +10,12 @@ export const middleware=req=>{
         return NextResponse.redirect(new URL(`/`,req.nextUrl))
     }
     if(!isPublicPath && !token){
-        return NextResponse.redirect(new URL('/auth/login',req.nextUrl))
+      
+      return NextResponse.redirect(new URL('/auth/login',req.nextUrl))
     }
     
 }
+
  
 // See "Matching Paths" below to learn more
 export const config = {

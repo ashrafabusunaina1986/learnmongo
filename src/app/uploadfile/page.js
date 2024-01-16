@@ -48,7 +48,7 @@ function UploadFile(request, response) {
     const getUserDetails = async () => {
         const res = await fetch(`/api/users/me`)
         const details=await res.json()
-        console.log(details)
+        console.log( details)
         setd(details.data._id)
     }
     useEffect(() => {

@@ -2,6 +2,7 @@ import connectDB from '../../../util/db'
 import User from '../../../../../models/userModel'
 import bcryptjs from 'bcryptjs'
 import { NextResponse } from 'next/server'
+import jwt from 'jsonwebtoken'
 
 connectDB()
 
@@ -32,8 +33,23 @@ export const POST =async req=>{
 
         console.log(savedUser)
 
-        return NextResponse.json({reqBody,success:true,message:"user created successfully",savedUser}
-        ,{status:201})
+        const tokenData={
+            id:savedUser._id,
+            username:savedUser.username,
+            email:savedUser.email
+        }
+
+        const token=await jwt.sign(tokenData,"nextjsyoutube",{expiresIn:'1h'})
+        const response=NextResponse.json({
+            message:'user created successfully',
+            success:true,
+            data:savedUser
+        })
+        response.cookies.set('token',token,{
+            httpOnly:true
+        })
+
+        return response
     } catch (error) {
         return NextResponse.json({error:error.message},{status:500})
     }
